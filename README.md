@@ -1,4 +1,4 @@
-# p5.js multi sketch template
+# Week 03
 
-By putting different sketch.js and index.html files in directories we can more easily switch between multiple experiments.
+Finishing up some loops and stars
 
