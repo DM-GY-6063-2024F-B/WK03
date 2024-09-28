@@ -2,17 +2,17 @@ function star(x, y, w, c) {
   let r = w / 2;
   push();
   translate(x, y);
-  line(-c, -c, 0, -r);
-  line(0, -r, c, -c);
+  line(c, -c, r, 0);
+  line(c, c, r, 0);
 
   line(-c, c, 0, r);
-  line(0, r, c, c);
-
-  line(c, -c, r, 0);
-  line(r, 0, c, c);
+  line(c, c, 0, r);
 
   line(-c, -c, -r, 0);
-  line(-r, 0, -c, c);
+  line(-c, c, -r, 0);
+
+  line(-c, -c, 0, -r);
+  line(c, -c, 0, -r);
   pop();
 }
 
