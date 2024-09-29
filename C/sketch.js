@@ -13,7 +13,10 @@ function setup() {
   for (let y = 0; y < height; y += pitch) {
     // draw a row of squares
     for (let x = 0; x < width; x += pitch) {
-      rect(x, y, sqDim);
+      push();
+      translate(x, y);
+      rect(0, 0, sqDim);
+      pop();
     }
   }
 }
