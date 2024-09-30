@@ -1,29 +1,21 @@
-function star(x, y, w, c) {
-  let r = w / 2;
-  push();
-  translate(x, y);
-  line(c, -c, r, 0);
-  line(c, c, r, 0);
-
-  line(-c, c, 0, r);
-  line(c, c, 0, r);
-
-  line(-c, -c, -r, 0);
-  line(-c, c, -r, 0);
-
-  line(-c, -c, 0, -r);
-  line(c, -c, 0, -r);
-  pop();
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(150, 150, 220);
-  strokeWeight(2);
+  rectMode(CENTER);
+  angleMode(DEGREES);
+  background(220, 120, 120);
 
-  star(width / 4, height / 2, 200, 10);
-  star(width / 2, height / 2, 350, 25);
-  star(3 * width / 4, height / 2, 100, 10);
+  strokeWeight(2);
+  let pitch = 100;
+  let sqDim = 0.9 * pitch;
+  translate(pitch / 2, pitch / 2);
+
+  // draw a column of rows
+  for (let y = 0; y < height; y += pitch) {
+    // draw a row of squares
+    for (let x = 0; x < width; x += pitch) {
+      rect(x, y, sqDim);
+    }
+  }
 }
 
 function draw() {}
