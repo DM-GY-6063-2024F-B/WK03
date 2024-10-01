@@ -13,9 +13,13 @@ function setup() {
   for (let y = 0; y < height; y += pitch) {
     // draw a row of squares
     for (let x = 0; x < width; x += pitch) {
+      let dd = random(sqDim/3, sqDim);
+      let vx = random(-40, 40);
+      let vy = random(-40, 40);
+
       push();
       translate(x, y);
-      rect(0, 0, sqDim);
+      rect(vx, vy, dd);
       pop();
     }
   }
